@@ -1,0 +1,161 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:textColor="#018667"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ADD NHÂN VIÊN"
+        android:gravity="center"
+        android:textSize="27dp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/img_avataNV_dialog"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:src="@drawable/emone" />
+
+    <EditText
+        android:visibility="invisible"
+        android:id="@+id/edmaNV_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mã Nhan Vien" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:endIconMode="clear_text"
+        app:helperTextTextColor="#ff0000"
+        android:layout_marginTop="-25dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtenDN_dialog"
+            android:inputType="textCapWords"
+            android:background="@drawable/ting"
+            android:textColor="@color/black"
+            android:hint="Tên Dang Nhap" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+<!--    hai ô nhập password -->
+    <LinearLayout
+        android:layout_marginTop="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="horizontal" >
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:endIconMode="password_toggle"
+            app:counterEnabled="true"
+            app:counterMaxLength="40"
+            app:helperTextTextColor="#ff0000"
+            android:layout_marginRight="3dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:background="@drawable/ting"
+                android:inputType="textPassword"
+                android:id="@+id/edPassword_nV_dialog"
+                android:textColor="@color/black"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:endIconMode="password_toggle"
+            app:helperTextTextColor="#ff0000"
+            app:counterEnabled="true"
+            app:counterMaxLength="40"
+            android:layout_marginLeft="3dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nhap lai Password"
+                android:id="@+id/edRePassword_nV_dialog"
+                android:background="@drawable/ting"
+                android:inputType="textPassword"
+                android:textColor="@color/black"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:endIconMode="clear_text"
+        app:helperTextTextColor="#ff0000"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tên Nhân Viên"
+            android:id="@+id/edTenNV_dialog"
+            android:inputType="text"
+            android:background="@drawable/ting"
+            android:textColor="@color/black"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:endIconMode="clear_text"
+        app:helperTextTextColor="#ff0000"
+        app:counterMaxLength="40"
+        app:counterEnabled="true"
+        android:layout_marginTop="7dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="SDT"
+            android:id="@+id/edSdtNV_dialog"
+            android:inputType="phone"
+            android:background="@drawable/ting"
+            android:textColor="@color/black"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:padding="15dp">
+        <Button
+            android:layout_marginRight="15dp"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:textSize="17dp"
+            android:layout_weight="1"
+            android:id="@+id/btnSave_NV_dialog"
+            android:text="SAVE"
+            android:background="@drawable/custom_btn" />
+        <Button
+            android:layout_marginLeft="15dp"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:id="@+id/btnCancel_NV_dialog"
+            android:text="CANCEL"
+            android:background="@drawable/custom_btn"
+            android:textSize="17dp" />
+    </LinearLayout>
+</LinearLayout>
